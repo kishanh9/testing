@@ -1,0 +1,362 @@
+/* Template */
+/* Typography */
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.green {
+	color: #8cc640;
+}
+
+/* Header */
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+nav.navbar {
+    min-height: 75px;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent !important;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 35px;
+    height: 2px;
+    border-radius: 0;
+    margin-bottom: 8px;
+    background: #8cc640 !important;
+    z-index: 10000;
+}
+
+img.logo {
+    max-width: 100px;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+img.logo.min {
+    max-width: 50px;
+}
+
+#primary-menu a {
+    color: #6d6f71;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#primary-menu li {
+    float: left;
+    margin: 15px;
+}
+#primary-menu {
+    list-style: none;
+    padding: 12px 0;
+    padding-left: 0;
+}
+
+/* Footer */
+footer#colophon {
+    color: #ffffff;
+    padding: 10px 0;
+    background: #6d6f71;
+}
+
+/* Home page */
+
+.landing-section {
+	height: 100vh;
+	width: 100%;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.carousel-control {
+    z-index: 10;
+    background: transparent;
+}
+
+#slider-cta {
+	-webkit-animation-delay:1000ms !important;
+    animation-delay: 1000ms !important;
+}
+
+.carousel-caption {
+    z-index: 10;
+    max-width: 400px;
+    text-align: left;
+    text-shadow: none;
+    left: 20%;
+    top: 15vh;
+    padding-bottom: 30px;
+    -webkit-animation-delay: 500ms !important;
+    animation-delay: 500ms !important;
+}
+
+.carousel-caption h1 {
+	font-size: 50px;
+}
+
+.carousel-inner>.item {
+	z-index: 10;
+    height: 100vh;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+
+.slider-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 650px;
+	height: 100vh;
+	z-index: 2;
+	background: #6d6f71;
+	opacity: 0.4;
+}
+
+.slider-overlay::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -200px;
+	width: 0;
+	z-index: 2;
+	height: 0;
+	border-style: solid;
+	border-width: 100vh 200px 0 0;
+	border-color: #6d6f71 transparent transparent transparent;
+}
+
+.section.contact-form,
+.contact-form, 
+.contact-details, 
+.disclaimer, 
+.mission-statement {
+	padding: 40px 0;
+}
+
+.disclaimer {
+	background: #e7e7e7;
+}
+
+.contact-details {
+	background: #8cc640;
+}
+
+.contact-form {
+	position: relative;
+    background: url(../images/contact.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.overlay-form {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #6d6f71;
+	opacity: 0.6;
+}
+
+.contact-col {
+	text-align: center;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+.contact-col .fa {
+	margin-right: 15px;
+}
+/* Forms */
+
+.gform_heading {
+    text-align: center;
+}
+
+h3.gform_title {
+	color: #8cc640;
+	font-size: 24px !important;
+}
+
+ul#gform_fields_1 {
+	column-count: 2;
+    column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+}
+
+ul#gform_fields_1 li {
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+}
+
+label.gfield_label {
+    color: #FFF;
+}
+
+.ginput_container input,
+.ginput_container textarea {
+    background: rgba(255,255,255,0.7);
+    border: none;
+    border-bottom: 2px solid #6d6f71;
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -o-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+    width: 100% !important;
+}
+
+.ginput_container input:focus,
+.ginput_container textarea:focus {
+	outline: none !important;
+	border-bottom: 2px solid #8cc640;
+}
+
+.gform_wrapper textarea.large {
+    height: 170px !important;
+}
+
+input#gform_submit_button_1 {
+    background: #8cc640;
+    border: none;
+    box-shadow: none;
+    padding: 6px 12px;
+    color: #FFF;
+}
+
+/*input#gform_submit_button_1::before {
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 16px 0 16px 15px;
+	border-color: transparent transparent transparent #8cc640;
+}*/
+
+/* Buttons */
+.btn {
+	border-radius: 0;
+	border: none;
+    box-shadow: none;
+    padding: 6px 12px;
+}
+
+.btn-green {	
+	background: #8cc640;
+    color: #FFF;
+}
+
+.btn-grey {	
+	background: #6d6f71;
+    color: #FFF;
+}
+
+div.focus {
+    outline: none !important;
+}
+
+@media screen and (max-width: 767px) {
+
+	ul#gform_fields_1 {
+		column-count: 1;
+	    column-gap: 0;
+	    -webkit-column-count: 1;
+	    -webkit-column-gap: 0;
+	    -moz-column-count: 1;
+	    -moz-column-gap: 0;
+	}
+
+	#primary-menu li {
+	    float: none;
+	    margin: 15px;
+	    text-align: center;
+	}
+
+	.navbar-toggle {
+		display: none;
+	}
+
+	.navbar-collapse {
+	    border: none !important;
+	    padding: 30px;
+	    height: auto;
+	    background: rgba(255,255,255,0.7);
+	    position: fixed;
+	    width: 100%;
+	    box-shadow: none;
+	    z-index: 100;
+	    top: 75px;
+	    height: 100vh;
+	    max-height: 100vh !important;
+	}
+
+}
